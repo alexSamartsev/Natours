@@ -1,0 +1,14 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "Siple landing page of fake company",
+  "main": "index.js",
+  "scripts": {
+    "compile:css":"node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Alex Samartsev",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.13.1"
+  }
+}
