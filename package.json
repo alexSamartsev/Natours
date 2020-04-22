@@ -4,11 +4,20 @@
   "description": "Siple landing page of fake company",
   "main": "index.js",
   "scripts": {
-    "compile:css":"node-sass sass/main.scss css/style.css -w"
+    "compile:css": "node-sass sass/main.scss css/style.css -w"
   },
   "author": "Alex Samartsev",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^4.13.1"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexSamartsev/Natours.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alexSamartsev/Natours/issues"
+  },
+  "homepage": "https://github.com/alexSamartsev/Natours#readme"
 }
