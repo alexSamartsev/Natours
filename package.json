@@ -1,15 +1,26 @@
 {
   "name": "natours",
   "version": "1.0.0",
-  "description": "Siple landing page of fake company",
+  "description": "Simple landing page of fake company",
   "main": "index.js",
   "scripts": {
-    "compile:css": "node-sass sass/main.scss css/style.css -w"
+    "watch:css": "node-sass sass/main.scss css/style.css -w",
+    "devserver":"live-server",
+    "start":"npm-run-all --parallel devserver watch:css",
+    "compile:css": "node-sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/icon-font.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.concat.css -o css/style.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:css concat:css prefix:css compress:css"
   },
   "author": "Alex Samartsev",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.13.1"
+    "autoprefixer": "^9.7.6",
+    "concat": "^1.0.3",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^7.0.27"
   },
   "dependencies": {},
   "repository": {
