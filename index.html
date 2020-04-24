@@ -80,21 +80,26 @@
 
           <div class="col-1-of-2">
             <div class="composition">
-              <img
-                src="img/nat-1-large.jpg"
-                alt="photo one"
-                class="composition__photo composition__photo--p1"
-              />
-              <img
-                src="img/nat-2-large.jpg"
-                alt="photo two"
-                class="composition__photo composition__photo--p2"
-              />
-              <img
-                src="img/nat-3-large.jpg"
-                alt="photo tree"
-                class="composition__photo composition__photo--p3"
-              />
+
+              <img srcset="img/nat-1.jpg 300w, img/nat-1-large.jpg 1000w" 
+                    alt="photo 1" 
+                    sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30vw, 300px"
+                    class="composition__photo composition__photo--p1"
+                    src="img/nat-1-large.jpg">
+              
+              <img srcset="img/nat-2.jpg 300w, img/nat-2-large.jpg 1000w" 
+                    alt="photo 2" 
+                    sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30vw, 300px"
+                    class="composition__photo composition__photo--p2"
+                    src="img/nat-2-large.jpg">
+              
+              <img srcset="img/nat-3.jpg 300w, img/nat-3-large.jpg 1000w" 
+                    alt="photo 3" 
+                    sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30vw, 300px"
+                    class="composition__photo composition__photo--p3"
+                    src="img/nat-3-large.jpg">
+
+              
             </div>
           </div>
         </div>
@@ -356,7 +361,14 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="img/logo-green-2x.png" alt="Full Logo" class="footer__logo">
+        <picture class="footer__logo">
+          <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x" 
+                  media="(max-width: 37.5em)">
+            <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Full Logo"
+                  src="img/logo-green-2x.png">
+        </picture>
+
+        
       </div>
       <div class="row">
         <div class="col-1-of-2">
@@ -382,8 +394,16 @@
     <div class="popup" id="popup">
       <div class="popup__content">
         <div class="popup__left">
-          <img src="img/nat-8.jpg" alt="Tour Photo" class="popup__img">
-          <img src="img/nat-9.jpg" alt="Tour Photo" class="popup__img">
+          <img srcset="img/nat-8-small.jpg 300w, img/nat-8.jpg 1000w," 
+                alt="Tour Photo"
+                sizes="(max-width:900px) 40vw, (max-width:600px) 50vw, 300px"
+                src="img/nat-8.jpg" 
+                class="popup__img">
+          <img srcset="img/nat-9-small.jpg 300w, img/nat-9.jpg 1000w," 
+                alt="Tour Photo"
+                sizes="(max-width:900px) 40vw, (max-width:600px) 50vw, 300px"
+                src="img/nat-9.jpg" 
+                class="popup__img">  
         </div>
         <div class="popup__right">
           <a href="#section-tours" class="popup__close">&times;</a>
@@ -397,6 +417,8 @@
       </div>
     </div>
 
+
+  
     <!--
     <section class="grid-test">
       <div class="row">
